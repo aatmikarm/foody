@@ -15,16 +15,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/rating_back_iv"
+        <Button
+            android:id="@+id/rating_back_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_backicon"
             android:backgroundTint="@color/light"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,24 +49,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/con1">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rating_and_review_rv"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/new_rating_review_tiet"
+            app:layout_constraintBottom_toTopOf="@+id/new_rating_rb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rating_and_review_rv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RatingBar
             android:id="@+id/new_rating_rb"
@@ -77,9 +64,9 @@
             android:layout_height="wrap_content"
             android:progressTint="@color/light"
             android:rating="4.5"
-            android:layout_marginStart="10dp"
             android:stepSize="0.5"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/new_rating_review_tiet"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -87,8 +74,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:hint="Write Product Review"
-            app:layout_constraintBottom_toTopOf="@+id/new_rating_rb"
+            app:layout_constraintBottom_toTopOf="@+id/rating_and_review_upload_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
@@ -100,39 +88,23 @@
                 android:drawableLeft="@drawable/ic_star"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/light"
-                android:inputType="textPersonName"
-                android:padding="10dp" />
+                android:inputType="textShortMessage" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rating_and_review_upload_cv"
-            android:layout_width="0dp"
+
+        <Button
+            android:id="@+id/rating_and_review_upload_btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/light"
-            app:cardCornerRadius="20dp"
+            android:text="Send Review"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/new_rating_rb">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Rate Product"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

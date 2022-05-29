@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <Button
             android:id="@+id/specificCategory_back_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -62,37 +62,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/specific_category_pb"
-            style="?android:attr/progressBarStyle"
-            android:layout_marginTop="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/specific_category_cart_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specific_category_pb"
-            app:srcCompat="@drawable/cart_add_ic" />
 
         <TextView
             android:id="@+id/specific_category_cart_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Products are not available for this category"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/cart_add_ic"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/light"
+            android:text="Coming Soon!"
             android:textColor="@color/light"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/specific_category_cart_iv" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/specific_category_pb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/light"
+            app:layout_constraintEnd_toEndOf="@+id/specific_category_cart_tv"
+            app:layout_constraintStart_toStartOf="@+id/specific_category_cart_tv"
+            app:layout_constraintTop_toBottomOf="@+id/specific_category_cart_tv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

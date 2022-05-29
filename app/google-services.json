@@ -7,12 +7,57 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:737156429662:android:8062b03f5e16692e5c41cf",
+        "mobilesdk_app_id": "1:737156429662:android:14bd4272828e931a5c41cf",
         "android_client_info": {
-          "package_name": "com.example.foody"
+          "package_name": "com.aatmik.foody"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "737156429662-u91aqccuse8qnrjr9ukmmc2tbooeif7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aatmik.foody",
+            "certificate_hash": "ad6e90d0cfd0e60f6d6b5421f99b73d9457cd2de"
+          }
+        },
+        {
+          "client_id": "737156429662-chqmfsus6e06vgqm447t1ptv8arcj400.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP-Ou05auh4NpIzLIJABl5NQVulcod0mI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737156429662-chqmfsus6e06vgqm447t1ptv8arcj400.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737156429662:android:7b9ecfeec21e6ee75c41cf",
+        "android_client_info": {
+          "package_name": "com.aatmik.foodyseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737156429662-r984ujdkhkp7msf8i218iot05e9jv0am.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aatmik.foodyseller",
+            "certificate_hash": "ad6e90d0cfd0e60f6d6b5421f99b73d9457cd2de"
+          }
+        },
         {
           "client_id": "737156429662-chqmfsus6e06vgqm447t1ptv8arcj400.apps.googleusercontent.com",
           "client_type": 3

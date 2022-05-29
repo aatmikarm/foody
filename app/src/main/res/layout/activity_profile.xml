@@ -16,31 +16,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/profileBack_iv"
+        <Button
+            android:id="@+id/profileBack_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_backicon"
             android:backgroundTint="@color/light"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <ImageView
-            android:id="@+id/logOut_iv"
+        <Button
+            android:id="@+id/logOut_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_logout"
             android:backgroundTint="@color/light"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +62,7 @@
                 app:cardCornerRadius="250dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ucon1">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
@@ -119,8 +113,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
+                android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_user_name_ll">
@@ -136,14 +131,11 @@
                         android:id="@+id/profileEmail_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/roundedittext"
                         android:drawableLeft="@drawable/email_ic"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/light"
                         android:editable="false"
-                        android:hint="Email Address"
-                        android:padding="10dp" />
+                        android:hint="Email Address" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -151,20 +143,18 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:hint="Phone Number">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/profilePhone_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/roundedittext"
                         android:drawableLeft="@drawable/ic_call"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/light"
                         android:hint="Phone Number"
-                        android:inputType="phone"
-                        android:padding="10dp" />
+                        android:inputType="phone" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -172,20 +162,18 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:hint="Name">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/profileName_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/roundedittext"
                         android:drawableLeft="@drawable/user_ic"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/light"
                         android:hint="Name"
-                        android:inputType="textPersonName"
-                        android:padding="10dp" />
+                        android:inputType="textPersonName" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -193,70 +181,34 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:hint="Address">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/profileAddress_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/roundedittext"
                         android:drawableLeft="@drawable/ic_location_black_24dp"
                         android:drawablePadding="10dp"
                         android:drawableTint="@color/light"
-                        android:hint="Address"
-                        android:padding="10dp" />
+                        android:hint="Address" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/con3"
+    <Button
+        android:id="@+id/profileUpload_btn"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Update Profile"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profileUpload_cv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/light"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Upload"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

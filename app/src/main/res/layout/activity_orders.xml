@@ -16,16 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/orders_back_iv"
+        <Button
+            android:id="@+id/orders_back_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_backicon"
             android:backgroundTint="@color/light"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -54,6 +51,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/con1">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orders_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ProgressBar
             android:id="@+id/order_pb"
@@ -61,9 +65,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/light"
-            app:layout_constraintBottom_toTopOf="@+id/order_cart_iv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_cart_tv" />
 
         <TextView
             android:id="@+id/order_cart_tv"
@@ -81,20 +85,10 @@
             android:id="@+id/order_cart_iv"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/orders_list_recycler_view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/orders_list_recycler_view"
-            app:srcCompat="@drawable/cart_add_ic"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/orders_list_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/orders_list_recycler_view"
+            app:srcCompat="@drawable/cart_add_ic" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

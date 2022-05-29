@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.foody">
+    package="aatmik.foody">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_GPS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+<!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,23 +20,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.medOnWay">
         <activity
-            android:name=".mobileNumber"
+            android:name="com.aatmik.foody.mobileNumber"
             android:exported="true" />
         <activity
-            android:name=".filter"
+            android:name="com.aatmik.foody.filter"
             android:exported="true" />
         <activity
-            android:name=".allProducts"
+            android:name="com.aatmik.foody.allProducts"
             android:exported="true" />
         <activity
-            android:name=".rating"
+            android:name="com.aatmik.foody.rating"
             android:exported="true"
             android:launchMode="singleTop" />
         <activity
-            android:name=".search"
+            android:name="com.aatmik.foody.search"
             android:exported="true" />
         <activity
-            android:name=".productStatus"
+            android:name="com.aatmik.foody.productStatus"
             android:exported="true" />
         <activity
             android:name="com.paytm.pgsdk.PaytmPGActivity"
@@ -44,33 +44,33 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".checksum"
+            android:name="com.aatmik.foody.checksum"
             android:exported="true" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAZRiGplfBvqc477emClGrI3Z16EV-A0ig" />
+            android:value="@string/google_direction_api_key" />
 
         <activity
-            android:name=".payment"
+            android:name="com.aatmik.foody.payment"
             android:exported="true" />
         <activity
-            android:name=".specificCategory"
+            android:name="com.aatmik.foody.specificCategory"
             android:exported="true" />
-        <activity android:name=".productDetails" />
+        <activity android:name="com.aatmik.foody.productDetails" />
         <activity
-            android:name=".profile"
+            android:name="com.aatmik.foody.profile"
             android:exported="true"
             tools:ignore="ExtraText" />
         <activity
-            android:name=".cart"
+            android:name="com.aatmik.foody.cart"
             android:exported="true" />
         <activity
-            android:name=".orders"
+            android:name="com.aatmik.foody.orders"
             android:exported="true"
             android:launchMode="singleTop" />
         <activity
-            android:name=".splashScreen"
+            android:name="com.aatmik.foody.splashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,19 +79,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".resetPassword"
+            android:name="com.aatmik.foody.resetPassword"
             android:exported="true" />
         <activity
-            android:name=".signUp"
+            android:name="com.aatmik.foody.signUp"
             android:exported="true" />
         <activity
-            android:name=".signIn"
+            android:name="com.aatmik.foody.signIn"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.aatmik.foody.MainActivity"
             android:exported="true" />
+
         <service
-            android:name=".FirebaseMessagingService"
+            android:name="com.aatmik.foody.FirebaseMessagingService"
             android:exported="true"
             android:permission="TODO"
             tools:ignore="ExportedService">

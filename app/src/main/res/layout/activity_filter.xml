@@ -85,5 +85,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        app:cornerRadius="50dp"
         android:text="Apply" />
 </LinearLayout>

@@ -15,16 +15,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <Button
             android:id="@+id/cart_back_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/ic_backicon"
             android:backgroundTint="@color/light"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,9 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CART"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,37 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/con1">
 
-        <ProgressBar
-            android:id="@+id/cart_pb"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@color/light"
-            app:layout_constraintBottom_toTopOf="@+id/cart_cart_iv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-        <TextView
-            android:id="@+id/cart_cart_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CART IS EMPTY"
-            android:textColor="@color/light"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/cart_cart_iv"
-            app:layout_constraintStart_toStartOf="@+id/cart_cart_iv"
-            app:layout_constraintTop_toBottomOf="@+id/cart_cart_iv" />
-
-        <ImageView
-            android:id="@+id/cart_cart_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cart_list_recycler_view"
-            app:srcCompat="@drawable/cart_add_ic"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cart_list_recycler_view"
             android:layout_width="match_parent"
@@ -92,6 +58,37 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/cart_cart_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cart_list_recycler_view"
+            app:srcCompat="@drawable/cart_add_ic" />
+
+
+        <TextView
+            android:id="@+id/cart_cart_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CART IS EMPTY"
+            android:textColor="@color/light"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cart_cart_iv"
+            app:layout_constraintStart_toStartOf="@+id/cart_cart_iv"
+            app:layout_constraintTop_toBottomOf="@+id/cart_cart_iv" />
+
+        <ProgressBar
+            android:id="@+id/cart_pb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cart_cart_tv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -127,36 +124,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cart_buy_cv"
-            android:layout_width="0dp"
+        <Button
+            android:id="@+id/cart_buy_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/light"
-            app:cardCornerRadius="20dp"
+            android:text="PROCEED"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="PROCEED"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
